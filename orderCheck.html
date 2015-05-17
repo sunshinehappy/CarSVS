@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>预约</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    
+    <style>
+ 	
+	#selectPanel {
+		margin-top:3%;
+		padding-left:7.5%;
+		margin-bottom:1%;
+	}
+	#btnPanel1 {
+         text-align:center;
+         margin-top:3%;
+         margin-bottom:3%;
+     }
+	#doc-select-1 {
+		padding:2% 0; 
+		border:1px solid #b2cfff;
+		width:60%;
+		border-radius:5px;
+	}
+    #doc-select-2 {
+        padding:2% 0;
+        border:1px solid #b2cfff;
+        width:60%;
+        border-radius:5px;
+    }
+    #doc-select-3 {
+        padding:2% 0;
+        border:1px solid #b2cfff;
+        width:60%;
+        border-radius:5px;
+    }
+    #doc-select-4 {
+        padding:2% 0;
+        border:1px solid #b2cfff;
+        width:60%;
+        border-radius:5px;
+    }
+	#carPhoto {
+		margin-top:3%;
+		padding-left:7.5%;
+	}
+
+	#btnPanel2 {
+		text-align:center;
+		margin-top:3%;
+		margin-bottom:3%;
+	}
+	#btnPanel3 {
+		text-align:center;
+		margin-top:3%;
+		margin-bottom:3%;
+	}
+	#file {
+		padding-left:7.5%;
+		margin-top:1%;
+	}
+	#btnPanel {
+        margin-top: 4%;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="am-g">
+    <div class="am-u-md-8 am-u-sm-centered">
+        <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+            <h2 class="am-titlebar-title ">选择车型，立马预约</h2>
+            <nav class="am-titlebar-nav">
+
+            </nav>
+        </div>
+        <form class="am-form" name="form1">
+            <fieldset class="am-form-set">
+                <select class=" am-input-lg" name="province" onchange="getCity();">
+                    <option value="0">请选择品牌</option>
+                    <option value="option2">一汽-大众奥迪</option>
+                    <option value="option3">奥迪(进口)</option>
+                    <option value="option3">阿尔法罗密欧</option>
+                    <option value="option3">保时捷</option>
+                    <option value="option3">通用别克</option>
+                    <option value="option3">北京汽车</option>
+                    <option value="option3">北京汽车制造厂</option>
+                    <option value="option3">北汽银翔</option>
+                    <option value="option3">北汽绅宝</option>
+                    <option value="option3">一汽奔腾</option>
+                    <option value="option3">北京奔驰</option>
+                    <option value="option3">福建奔驰</option>
+                    <option value="option3">奔驰(进口)</option>
+                    <option value="option3">华晨宝马</option>
+                    <option value="option3">宝马(进口)</option>
+                    <option value="option3">上汽通用五菱</option>
+                    <option value="option3">宾利</option>
+                    <option value="option3">巴博斯</option>
+                    <option value="option3">布加迪</option>
+                    <option value="option3">东风本田</option>
+                    <option value="option3">广汽本田</option>
+                    <option value="option3">宝马</option>
+                    <option value="option3">宝马</option>
+                    <option value="option3">宝马</option>
+                    <option value="option3">宝马</option>
+                    <option value="option3">宝马</option>
+                    <option value="option3">宝马</option>
+                </select>
+                <select class=" am-input-lg" name="city">
+                    <option value="0">请选择类型</option>
+                </select>
+                <select class=" am-input-lg">
+                    <option value="option1">选择取送车服务...</option>
+                    <option value="option2">取车39元</option>
+                    <option value="option3">送车39元</option>
+                    <option value="option3">取送车69元</option>
+                </select>
+                <select class=" am-input-lg">
+                    <option value="option1">选择保险公司</option>
+                    <option value="option2">1</option>
+                    <option value="option3">2</option>
+                    <option value="option3">3</option>
+                </select>
+                <div class="am-checkbox">
+                    <label>
+                        <input type="checkbox"> 代步车服务
+                    </label>
+                    <a id="showContent" href="#"><span class="am-fr"><i class="am-icon-exclamation"></i></span></a>
+                    <div id="content" style="display:none; font-size:x-small;">代步服务是。。。。</div>
+                </div>
+                <select class=" am-input-lg">
+                    <option value="option1">取车地点</option>
+                    <option value="option2">南岸区</option>
+                    <option value="option3">渝北区</option>
+                    <option value="option3">江北区</option>
+                    <option value="option3">巴南区</option>
+                    <option value="option3">九龙坡区</option>
+                    <option value="option3">渝中区</option>
+                    <option value="option3">沙坪坝区</option>
+                    <option value="option3">大渡口区</option>
+                    <option value="option3">北碚区</option>
+                </select>
+                <input type="text" placeholder="输入具体街道地址">
+            </fieldset>
+            <a href="flow.html">
+                <button type="submit" class="am-btn am-radius am-btn-danger am-btn-block">一键理赔</button>
+            </a>
+        </form>
+    </div>
+</div>
+
+    <!-- 底部公共代码-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="index.html" class="">
+                <h1><span  class="ion-ios-home-outline"></span></h1>
+            </a>
+        </li>
+        <li>
+            <a href="" class="">
+                <h1><span class="ion-ios-list-outline"></span></h1>
+            </a>
+        </li>
+        <li >
+            <a href="personalCenter.html" class="">
+                <h1><span class="ion-ios-person-outline"></span></h1>
+            </a>
+        </li>
+        <li data-am-navbar-share>
+            <a href="" class="">
+                <h1><span class="ion-ios-paperplane"></span></h1>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script src="js/amazeui.legacy.min.js"></script>
+<script src="js/amazeui.widgets.helper.min.js"></script>
+<script>
+    var city=[
+
+        "奥迪A3","奥迪A4L","奥迪A6L","奥迪Q3","奥迪Q5","奥迪A4","奥迪A6"
+
+        "奥迪A1","奥迪S3","奥迪A4","奥迪A5","奥迪S5","奥迪S6","奥迪A7","奥迪S7","奥迪A8","奥迪S8","奥迪Q3(进口)","奥迪Q5(进口)","奥迪SQ5","奥迪Q7","奥迪TT","奥迪TTS", "奥迪R8"
+
+        "MiTo","Giulietta","ALFA 4C","Gloria","ALFA 147","ALFA 156","ALFA 8C","ALFA GT"
+
+        "Rapide","V8 Vantage","V12 Vantage","阿斯顿·马丁DB9","Vanquish","Cygnet","拉共达Taraf","Virage","Vulcan","阿斯顿·马丁DB5","阿斯顿·马丁DBX","V12 Zagato","阿斯顿·马丁DBS","阿斯顿·马丁One-77"
+
+        "Panamera","Macan","卡宴","Boxster","Cayman","保时捷911","保时捷918","保时捷919","Carrera GT","保时捷356","保时捷968"
+
+        "凯越","英朗","君威","君越","昂科拉","昂科威","别克GL8","林荫大道","荣御","昂科雷"
+
+        "北京40","北京汽车E系列","北京汽车BC302Z","北京汽车C71","北京汽车C60","北京汽车C51X","北京汽车B90","北京汽车BJ80","北京汽车B60"
+
+        "战旗","BJ 212","域胜007","勇士","骑士S12"
+
+        "幻速S2","幻速S3","幻速H2"
+
+        "绅宝D20","绅宝D50","绅宝D60","绅宝D70","绅宝X65"
+
+        "奔腾B50","奔腾B70","奔腾B90","奔腾X80"
+
+        "C180","C200","C260","E180","E200","E260","GLK200","GLK260","GLK300"
+
+        "威霆","唯雅诺","凌特"
+
+        "奔驰A级","奔驰B级","奔驰CLA级","奔驰C级","奔驰E级","奔驰CLS级","奔驰S级","奔驰GLA级","奔驰M级","奔驰G级","奔驰GL级","奔驰R级","奔驰SLK级","奔驰-AMG","迈巴赫S级"
+
+        "宝马3系","宝马5系","宝马X1"
+
+        "宝马i3","宝马1系","宝马3系","宝马3系GT","宝马4系","宝马5系","宝马6系","宝马7系","宝马X3","宝马X5","宝马X6","宝马i8","宝马Z4","宝马M3","宝马M4","宝马M5","宝马M6"
+
+        "乐驰","宝骏610","宝骏630","宝骏730"
+
+        "慕尚","飞驰","欧陆","雅骏","雅致"
+
+        "巴博斯 CLS级","巴博斯 S级","巴博斯 M级","巴博斯 SLK级"
+
+        "威航"
+
+        "杰德","思域","思铂睿","本田XR-V","本田CR-V","艾力绅","本田S"
+
+        "锋范","飞度","凌派","歌诗图","雅阁","缤智","奥德赛","思迪"
+
+        "标致301","标致307","标致308","标致308S","标致408","标致508","标致2008","标致3008","标致206","标致207"
+
+        "标致207(进口)","标致308(进口)","标致4008","标致RCZ"
+
+        "唐","比亚迪F0","比亚迪F3","比亚迪G3","比亚迪G5","比亚迪L3","秦","速锐","比亚迪G6","思锐","比亚迪S6","比亚迪S7","比亚迪e6","比亚迪M6"
+
+        "福瑞达","福瑞达M50","爱迪尔"
+
+        "长城C20R","长城M2","长城C30","长城C50","长城M4","风骏5","风骏6","长城精灵"酷熊","炫丽","嘉誉"
+
+        "奔奔","奔奔MINI","长安CX20","悦翔V5","致尚XT","逸动","长安CX30"翔V7","睿骋","长安CS35","长安CS75"
+
+        "DS 5LS","DS 5","DS 6"
+
+        "DS 3","DS 4","神韵","DS 5(进口)","DS Wild Rubis","DS23"
+
+        "V3菱悦","V5菱致","V6菱仕","东南V7","DX7 博朗","菱帅"
+
+        "御风","俊风CV03","猛士"
+
+        "奥丁","帅客","御轩","俊风","锐骐多功能车"
+
+        "东风风神E30","东风风神H30","东风风神S30","东风风神A60","东风风神A30","东风风神L60"
+
+        "景逸","景逸S50","景逸X3","景逸X5","菱智"
+
+        "POLO","桑塔纳","朗行","朗逸","朗境","凌渡","帕萨特","途观","途安","高尔"
+
+        "捷达","宝来","高尔夫","速腾","迈腾","CC"
+
+        "大众up!","甲壳虫","高尔夫(进口)","迈腾(进口)","辉腾","Tiguan","途锐","夏朗","迈特威","凯路威","尚酷","大众Eos"
+
+        "森雅"
+
+        "酷威","道奇Ram","Dart","锋哲","酷搏"
+
+        "YARiS L 致炫","雷凌","凯美瑞","汉兰达","逸致","雅力士"
+
+        "威驰","花冠","卡罗拉","普锐斯","锐志","皇冠","一汽丰田RAV4","兰德酷路泽","普拉多","柯斯达"
+
+        "FJ 酷路泽","Venza威飒","德酷路泽(进口)","普拉多(进口)","红杉","埃尔法","丰田86","坦途"
+
+        "California","法拉利458","F12berlinetta","法拉利FF","LaFerrari"
+
+        "锐界","嘉年华","福克斯","福睿斯","蒙迪欧","致胜","翼搏","翼虎","麦柯斯"
+
+        "福克斯(进口)","锐界(进口)","探险者","征服者","福特E350","野马","福特F150"
+
+        "揽福","探索者Ⅲ","雄师F22"
+
+        "Ottimo致悦","菲翔"
+
+        "菲亚特500","菲跃"
+
+        "TERRAIN","SAVANA","SIERRA"
+
+        "传祺GS4","传祺GA3","传祺GA3S视界","传祺GA5","传祺GA6","传祺GS5","传祺GS5速博"
+
+        "E美","奥轩GX5","广汽吉奥GX6","星朗","奥轩G5"
+
+        "观致3","观致3"
+
+        "路盛E70","华泰B11","宝利格","圣达菲","特拉卡"
+
+        "哈弗H6 Coupe","哈弗H8","哈弗H1","哈弗H2","哈弗H5","哈弗H6","哈弗H9"
+
+        "悍马HX","悍马H3","悍马H1","悍马H2"
+
+        "丘比特","福美来","福美来M5","海马M3","海马M8","海马S5","海马S7","海马骑士","普力马","海马3","海福星"
+
+        "红旗L5","红旗H7","红旗盛世","红旗L9"
+
+        "翱龙CUV","旗胜F1","旗胜V3","挑战者SUV"
+
+        "指南者","自由客","牧马人","自由光","大切诺基(进口)","自由侠","指挥官"
+
+        "熊猫","吉利SC3","金刚","英伦C5","英伦TX4","吉利EC8","吉利EC7","吉利GX7","吉利SX7","博瑞"
+
+        "捷豹XE","捷豹XF","捷豹XJ","捷豹F-TYPE"
+
+        "悦悦","和悦A13","和悦A13RS","和悦A30","和悦","瑞风S3","瑞风S5","和悦RS","瑞风M3","瑞风M5","江淮K3"
+
+        "驭胜","宝典","域虎"
+
+        "克莱斯勒300C","大捷龙","PT 漫步者"
+
+        "凯迪拉克ATS-L","凯迪拉克XTS","SLS赛威","凯迪拉克CTS"
+
+        "Huracan","Aventador","Urus"
+
+        "力帆320","力帆330","力帆530","力帆520","力帆620","力帆630","力帆720","力帆X60"
+
+        "幻影","古思特","魅影"
+
+        "林肯MKZ","林肯MKS","林肯MKC","林肯MKT","领航员"
+
+        "飞腾","飞腾C5","黑金刚","猎豹CS6","猎豹Q6"
+
+        "莲花L3","莲花L5","莲花L6","莲花T5"
+
+        "神行者2","发现神行","极光","发现","揽胜"
+
+        "利亚纳A6","利亚纳","北斗星X5"
+
+        "奥拓","雨燕","启悦","天语 SX4","天语 尚悦","锋驭"
+
+        "速翼特","凯泽西","吉姆尼","超级维特拉"
+
+        "陆风X5","陆风X6","陆风X8","陆风X9","风尚"
+
+        "雷克萨斯CT","雷克萨斯IS","雷克萨斯ES","雷克萨斯GS","雷克萨斯LS","雷克萨斯RX","雷克萨斯GX"
+
+        "风朗","甘娜","拉古那","纬度","塔利斯曼","科雷傲","风景"
+
+        "MG3","MG GT","MG5","MG6","锐腾"
+
+        "MINI","MINI ROADSTER","MINI CLUBMAN","MINI COUNTRYMAN","MINI PACEMAN"
+
+        "Ghibli","总裁","GranTurismo","GranCabrio"
+
+        "迈巴赫"
+
+        "马自达2","Axela昂克赛拉","马自达3","星骋","马自达CX-5"
+
+        "阿特兹","马自达6","睿翼","马自达CX-7","马自达8"
+
+        "马自达CX-7(进口)","马自达CX-9","马自达5","马自达MX-5"
+
+        "纳5","优6 SUV","大7 SUV","大7 MPV"
+
+        "欧宝Adam","Karl","欧宝Corsa","雅特","英速亚","威达"
+
+        "歌ILX","讴歌TL","讴歌TLX","讴歌RL","讴歌RLX","讴歌RDX","讴歌MDX","讴歌ZDX","讴歌TSX"
+
+        "启辰R30","晨风","启辰D50","启辰R50","启辰T70"
+
+        "艾瑞泽M7","奇瑞QQ","风云2","奇瑞E3","艾瑞泽3","艾瑞泽7","奇瑞E5","瑞虎3","瑞虎5"
+
+        "起亚K2","秀尔","赛拉图","福瑞迪","起亚K3S","起亚K3","起亚K4","起亚K5","起亚KX3","狮跑","智跑","远舰","嘉华"
+
+        "起亚K9","起亚K5(进口)","凯尊","索兰托","霸锐","佳乐","起亚VQ","速迈"
+
+        "玛驰","骊威","骐达","轩逸","阳光","天籁","逍客","奇骏","楼兰","颐达"
+
+        "帕拉丁","日产NV200","日产D22"
+
+        "途乐","贵士","日产370Z","日产GT-R","碧莲"
+
+        "瑞麒M1","瑞麒M5","瑞麒G3","瑞麒G5","瑞麒G6"
+
+        "荣威E50","荣威350","荣威550","荣威750","荣威950"
+
+        "风迪思","蓝瑟","翼神","翼神","君阁"
+
+        "劲炫ASX","帕杰罗·劲畅"
+
+        "LANCER","欧蓝德(进口)","帕杰罗·劲畅(进口)","帕杰罗(进口)"
+
+        "双环SCEO","小贵族","来宝SRV"
+
+        "主席","柯兰多","爱腾","雷斯特","雷斯特W","享御"
+
+        "思铭"
+
+        "翼豹","力狮","斯巴鲁XV","森林人","傲虎","驰鹏","斯巴鲁BRZ"
+
+        "晶锐","明锐","昕动","昕锐","速派","野帝"
+
+        "Saab 9-3","Saab 9-5","Saab 9-4X","Saab 9-7"
+
+        "MODEL","MODEL X"
+
+        "威麟H3","威麟H5","威麟X5","威麟V5"
+
+        "沃尔沃S80L","沃尔沃S40"
+
+        "沃尔沃S60L","沃尔沃XC60","XC Classic"
+
+        "沃尔沃V40","沃尔沃S60","沃尔沃V60","沃尔沃XC90","沃尔沃XC60"
+
+        "瑞纳","瑞奕","悦动","朗动","伊兰特","名图","索纳塔八","索纳塔九","北京现代ix25","途胜","北京现代ix35","全新胜达","雅绅特","北京现代i30","名驭","御翔"
+
+        "Veloster飞思","索纳塔(进口)","雅尊","捷恩斯","雅科仕","全新胜达(进口)","格锐","劳恩斯-酷派"
+
+        "伊比飒Ibiza","LEON","欧悦搏","西雅特Mii"
+
+        "赛欧","爱唯欧","科鲁兹","景程","迈锐宝","TRAX创酷","科帕奇","乐骋","乐风","科迈罗Camaro"
+
+        "雪铁龙C4L","世嘉","爱丽舍","雪铁龙C5","雪铁龙C3-XR","毕加索","雪铁龙C2","富康","凯旋"
+
+        "威志V2","威志V5","夏利","夏利N5","夏利N7","骏派D60","威乐","威志","威姿"
+
+        "森雅S80","森雅M80"
+
+        "猎鹰","永源A380"
+
+        "英致G3"
+
+        "英菲尼迪Q50L","英菲尼迪QX50"
+
+        "英菲尼迪Q50","英菲尼迪Q70","英菲尼迪ESQ","英菲尼迪QX50","英菲尼迪QX60","英菲尼迪QX70","英菲尼迪QX80","英菲尼迪Q60","英菲尼迪Q60S"
+
+        "野马F10","野马F10","野马F16","野马T70"
+
+        "中兴C3","中兴GX3","威虎G3","威虎TUV"
+
+        "中华H220","中华H230","中华H320","中华H330","中华H530","中华骏捷FRV","中华骏捷FSV","中华骏捷","中华尊驰","中华V5","中华酷宝"
+
+        "江南TT","云100","众泰Z100","众泰Z300","众泰Z500","众泰T200","众泰T600"
+    ];
+    function getCity(){
+        //获得省份下拉框的对象
+        var sltProvince=document.form1.province;
+        //获得城市下拉框的对象
+        var sltCity=document.form1.city;
+        //得到对应省份的城市数组
+        var provinceCity=city[sltProvince.selectedIndex - 1];
+
+        //清空城市下拉框，仅留提示选项
+        sltCity.length=1;
+
+        //将城市数组中的值填充到城市下拉框中
+        for(var i=0;i<provinceCity.length;i++){
+            sltCity[i+1]=new Option(provinceCity[i],provinceCity[i]);
+        }
+    }
+</script>
+<script>
+
+        var showContent = document.getElementById("showContent");
+        var content = document.getElementById("content");
+        showContent.onclick = function() {
+            content.style.display = "block";
+        }
+
+</script>
+</body>
+</html>

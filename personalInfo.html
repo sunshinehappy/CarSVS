@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>个人信息</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    
+    <style>
+	body { background-color:rgb(238,247,252); }
+	#username1, #username2, #username3, #username4, #username5 { margin-top:2%; border-radius:5px; border:1px solid rgb(179,207,255); padding: 2% 0; background-color:white; }
+	#rig, #rig1, #rig2, #rig3, #rig4 { text-align:right; }
+	#outButton { text-align:right; margin-top:2%; margin-bottom: 4%; }
+	.footer { padding:8% 0; }
+	.footer .am-u-sm-4 { text-align:center; }
+	#bgImgPanel { text-align:center; }
+	#foot { background-color:white; }
+  	</style>
+</head>
+
+<body>
+
+<div data-am-widget="list_news" class="am-list-news am-list-news-default">
+    <!--列表标题-->
+    <div class="am-list-news-hd am-cf">
+        <!--带更多链接-->
+        <a href="#" class="">
+            <h2>王大锤${customerName}</h2>
+            <span class="am-list-news-more am-fr">修改 &raquo;</span>
+        </a>
+    </div>
+    <div class="am-list-news-bd">
+        <ul class="am-list">
+            <li class="am-g am-list-item-dated">
+                <a href="##" class="am-list-item-hd ">姓名</a>
+                <span class="am-list-date">王大锤${customerName}</span>
+            </li>
+            <li class="am-g am-list-item-dated">
+                <a href="##" class="am-list-item-hd ">邮箱</a>
+                <span class="am-list-date">34@qq.com${eamil}</span>
+            </li>
+            <li class="am-g am-list-item-dated">
+                <a href="##" class="am-list-item-hd ">手机</a>
+                <span class="am-list-date">312123123${phone}</span>
+            </li>
+            <li class="am-g am-list-item-dated">
+                <a href="##" class="am-list-item-hd ">我的V码</a>
+                <span class="am-list-date">34545${Vcode}</span>
+            </li>
+            <li class="am-g am-list-item-dated">
+                <a href="##" class="am-list-item-hd ">我的积分</a>
+                <span class="am-list-date">34545${Vcode}</span>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div id="outButton"  class="am-g am-container">
+    <a href="orderMsg.html"><button type="button" class="am-btn am-btn-success am-radius">订单查看</button></a>
+    <a href="register.html" onclick="javascript: return confirm('确定要退出吗？');"><button type="button" class="am-btn am-btn-danger am-radius">退出账户</button></a>
+</div>
+    
+<!-- 底部公共代码-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="index.html" class="">
+                <h1> <span  class="ion-ios-home-outline" ></span></h1>
+            </a>
+        </li>
+        <li>
+            <a href="orderCheck.html" class="">
+                <h1> <span class="ion-ios-list-outline"></span></h1>
+            </a>
+        </li>
+        <li >
+            <a href="personalCenter.html" class="">
+                <h1>  <span class="ion-ios-person-outline"></span></h1>
+            </a>
+        </li>
+        <li data-am-navbar-share>
+            <a href="" class="">
+                <h1>  <span class="ion-ios-paperplane"></span></h1>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script src="js/amazeui.legacy.min.js"></script>
+<script src="js/amazeui.widgets.helper.min.js"></script>
+    
+</body>
+</html>

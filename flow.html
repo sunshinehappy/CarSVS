@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>流程查看</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    
+
+</head>
+
+<body>
+<div class="am-g">
+    <div class="am-u-md-8 am-u-sm-centered">
+        <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+            <h2 class="am-titlebar-title ">流程查看</h2>
+            <nav class="am-titlebar-nav">
+            </nav>
+        </div>
+
+        <section data-am-widget="accordion" class="am-accordion am-accordion-default"
+                 data-am-accordion='{ "multiple": true }'>
+            <dl class="am-accordion-item am-active">
+                <dt class="am-accordion-title">预约服务<span class="am-fr">2015-4-11${end_time}</span></dt>
+                <dd class="am-accordion-bd am-collapse am-in">
+                    <div class="am-accordion-content">代驾员张三${EName}，电话XXXXX${phone}渝北港天汽车服务有限公司，服务顾问李四， 电话XXXXX/
+                        <br/>神州租车，租车顾问PP，电话XXXXX</div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">接车服务</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content"></div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">预检服务</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content"></div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">定损服务</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <a href="#" class="am-btn am-btn-default am-radius am-btn-loading-example am-btn-xs" data-am-loading="{loadingText: '已接受'}">接受</a>
+                        <a id="rejectButton" href="#"  class="am-btn am-btn-default am-radius am-btn-xs">拒绝</a>
+                        <a id="resetButton" style="display: none;" href="#"  class="am-btn am-btn-default am-radius am-btn-xs">重新接受</a>
+                        <a href="repairList.html" class="am-btn am-btn-default am-radius am-btn-xs">维修清单</a>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">维修状态</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <!--<a href="#" class="am-btn am-btn-default am-radius am-btn-loading-example am-btn-xs" data-am-loading="{loadingText: '已接受'}">接受</a>-->
+                        <!--<a href="question.html" class="am-btn am-btn-primary am-radius am-btn-xs">疑问咨询</a>-->
+                        <!--<p style="color: orangered;font-size: x-small;">维修不满意，冻结付款</p>-->
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">质量确认</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <a href="#" class="am-btn am-btn-default am-radius am-btn-loading-example am-btn-xs" data-am-loading="{loadingText: '已接受'}">接受</a>
+                        <a href="question.html" class="am-btn am-btn-primary am-radius am-btn-xs">疑问咨询</a>
+                        <!--<p style="color: orangered;font-size: x-small;">维修不满意，冻结付款</p>-->
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">提车服务</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <a href="#" class="am-btn am-btn-default am-radius am-btn-xs">预约代价</a>
+                        <a href="#" class="am-btn am-btn-default am-radius am-btn-xs">自己提车</a>
+                        <a href="otherDrive.html" class="am-btn am-btn-default am-radius am-btn-xs">他人提车</a>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">付款服务</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <a href="paycopy.html" class="am-btn am-btn-default am-radius am-btn-xs">去支付</a>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">送车状态</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content"></div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">评价服务</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <a href="comment.html" class="am-btn am-btn-default am-radius">去评价</a>
+                    </div>
+                </dd>
+            </dl>
+            <dl class="am-accordion-item">
+                <dt class="am-accordion-title">保险赔付</dt>
+                <dd class="am-accordion-bd am-collapse ">
+                    <div class="am-accordion-content">
+                        <a href="#" class="am-btn am-btn-default am-radius am-btn-xs">赔款收到</a>
+                        <a href="question.html" class="am-btn am-btn-primary am-radius am-btn-xs">疑问咨询</a>
+                    </div>
+                </dd>
+            </dl>
+        </section>
+        <!--内容-->
+
+    </div>
+</div>
+
+<!-- 底部公共代码-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="index.html" class="">
+                <h1> <span  class="ion-ios-home-outline" ></span></h1>
+            </a>
+        </li>
+        <li>
+            <a href="orderCheck.html" class="">
+                <h1> <span class="ion-ios-list-outline"></span></h1>
+            </a>
+        </li>
+        <li >
+            <a href="personalCenter.html" class="">
+                <h1>  <span class="ion-ios-person-outline"></span></h1>
+            </a>
+        </li>
+        <li data-am-navbar-share>
+            <a href="" class="">
+                <h1>  <span class="ion-ios-paperplane"></span></h1>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script src="js/amazeui.legacy.min.js"></script>
+<script src="js/amazeui.widgets.helper.min.js"></script>
+
+</body>
+<script>
+    $(".am-btn-loading-example").click(function(){
+        $(this).button('loading');
+        $("#rejectButton").css("display","none");
+    });
+
+</script>
+<script>
+    var rejectButton = document.getElementById("rejectButton");
+    var resetButon = document.getElementById("resetButton");
+    rejectButton.onclick = function() {
+        if(confirm("确定要拒绝吗?")) {
+            this.style.display = "none";
+            resetButon.style.display = "block";
+        }
+    }
+
+</script>
+</html>

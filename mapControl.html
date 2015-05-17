@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html,#allmap { width:100%; height:100%; overflow:hidden; margin:0; }
+		#golist { display:none; }
+		@media (max-device-width: 780px){ #golist{ display:block !important; } }
+	</style>
+	<title>添加普通标注点</title>
+</head>
+<body>
+	<a id="golist" href="../demolist.htm">返回demo列表页</a>
+	<div id="allmap"></div>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?type=quick&ak=Yblsw8KALH4UgpwFFOyqIQ5G&v=1.0"></script>
+</body>
+
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom(new BMap.Point(106.554, 29.556), 13);
+
+	map.addControl(new BMap.ZoomControl());  //添加地图缩放控件
+
+	var marker1 = new BMap.Marker(new BMap.Point(106.654, 29.556));  //创建标注
+	map.addOverlay(marker1);                 // 将标注添加到地图中
+	//创建信息窗口
+	var infoWindow1 = new BMap.InfoWindow("张凯的店一号；联系电话111");
+	marker1.addEventListener("click", function(){this.openInfoWindow(infoWindow1);});
+
+	var marker2 = new BMap.Marker(new BMap.Point(106.554, 29.556));  //创建标注
+	map.addOverlay(marker2);                 // 将标注添加到地图中
+	//创建信息窗口
+	var infoWindow2 = new BMap.InfoWindow("张凯的店二号；联系电话110");
+	marker2.addEventListener("click", function(){this.openInfoWindow(infoWindow2);});
+
+	var marker3 = new BMap.Marker(new BMap.Point(106.554, 29.656));  //创建标注
+	map.addOverlay(marker1);                 // 将标注添加到地图中
+	//创建信息窗口
+	var infoWindow3 = new BMap.InfoWindow("张凯的店三号；联系电话112");
+	marker3.addEventListener("click", function(){this.openInfoWindow(infoWindow3);});
+</script>
+
+</html>

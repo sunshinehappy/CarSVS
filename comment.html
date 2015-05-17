@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>评价</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    
+    <style>
+	#bgColor { background-color:rgb(239,240,240);  padding-bottom: 4%; }
+	#bgColor1 div { background-color:white; padding-top:5%; }
+	#bgColor2 div { background-color:white; padding-bottom:4%; }
+	#pingjiaBtn div { text-align:center; margin-top:5%; margin-bottom:5%; }
+	#start { padding:1% 0; }
+	.footer { padding:8% 0; }
+	.footer .am-u-sm-4 { text-align:center; }
+	.rating { float:left; }
+
+	/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   		follow these rules. Every browser that supports :checked also supports :not(), so
+   		it doesn’t make the test unnecessarily selective */
+	.rating:not(:checked) > input {  position:absolute; top:-9999px; clip:rect(0,0,0,0); }
+
+	.rating:not(:checked) > label { float:right; width:1em; padding:0 .1em; overflow:hidden; white-space:nowrap; cursor:pointer; font-size:200%; line-height:1.2; color:#ddd; text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5); }
+	.rating:not(:checked) > label:before { content: '★ '; }
+
+	.rating > input:checked ~ label { color: #f70; text-shadow:1px 1px #c60, 2px 2px #940, .1em .1em .2em rgba(0,0,0,.5); }
+
+	.rating:not(:checked) > label:hover,
+	.rating:not(:checked) > label:hover ~ label { color: gold; text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5); }
+
+	.rating > input:checked + label:hover,
+	.rating > input:checked + label:hover ~ label,
+	.rating > input:checked ~ label:hover,
+	.rating > input:checked ~ label:hover ~ label,
+	.rating > label:hover ~ input:checked ~ label {  color: #ea0; text-shadow:1px 1px goldenrod, 2px 2px #B57340, .1em .1em .2em rgba(0,0,0,.5); }
+
+	.rating > label:active { position:relative; top:2px; left:2px; }
+	
+  	</style>
+</head>
+
+<body>
+
+<div class="am-u-md-8 am-u-sm-centered">
+    <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+        <h2 class="am-titlebar-title ">评价</h2>
+        <nav class="am-titlebar-nav">
+
+        </nav>
+    </div>
+    <div class="am-panel am-panel-default">
+        <div class="am-panel-hd">订单ID：213123${CAR_OWNER_ID}<span class="am-badge am-badge-danger am-radius am-fr " >￥25000</span></div>
+        <div class="am-panel-bd">
+
+            维修类型：保险理赔<br>
+            车型：保时捷911${CAR_NAME}<br>
+
+        </div>
+    </div>
+	<div>
+        <div style="padding-left:4%; margin-bottom:6%;" class="am-form-group">
+            <textarea style="background-color:rgb(214,220,220); border-radius:5px;" class="" placeholder="亲~ 请写出评论哦~" rows="2"  id="doc-ta-1"></textarea>
+        </div>
+    </div>
+
+    <div id="start" class="am-g">
+        <div class="am-u-sm-4"><span>维修质量</span></div>
+        <div class="am-u-sm-8">
+            <span class="rating">
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Rocks!">4 stars</label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Rocks!">3 stars</label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Rocks!">2 stars</label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Rocks!">1 stars</label>
+            </span>
+        </div>
+    </div>
+
+    <div id="start1" class="am-g">
+        <div class="am-u-sm-4"><span>维修速度</span></div>
+        <div class="am-u-sm-8">
+            <span class="rating">
+                <input type="radio" id="star15" name="rating1" value="5" /><label for="star15" title="Rocks!">5 stars</label>
+                <input type="radio" id="star14" name="rating1" value="4" /><label for="star14" title="Rocks!">4 stars</label>
+                <input type="radio" id="star13" name="rating1" value="3" /><label for="star13" title="Rocks!">3 stars</label>
+                <input type="radio" id="star12" name="rating1" value="2" /><label for="star12" title="Rocks!">2 stars</label>
+                <input type="radio" id="star11" name="rating1" value="1" /><label for="star11" title="Rocks!">1 stars</label>
+            </span>
+        </div>
+    </div>
+
+    <div id="start2" class="am-g">
+        <div class="am-u-sm-4"><span>维修服务</span></div>
+        <div class="am-u-sm-8">
+            <span class="rating">
+                <input type="radio" id="star25" name="rating2" value="5" /><label for="star25" title="Rocks!">5 stars</label>
+                <input type="radio" id="star24" name="rating2" value="4" /><label for="star24" title="Rocks!">4 stars</label>
+                <input type="radio" id="star23" name="rating2" value="3" /><label for="star23" title="Rocks!">3 stars</label>
+                <input type="radio" id="star22" name="rating2" value="2" /><label for="star22" title="Rocks!">2 stars</label>
+                <input type="radio" id="star21" name="rating2" value="1" /><label for="star21" title="Rocks!">1 stars</label>
+            </span>
+        </div>
+    </div>
+    <div id="start3" class="am-g">
+        <div class="am-u-sm-4"><span>管家服务</span></div>
+        <div class="am-u-sm-8">
+            <span class="rating">
+                <input type="radio" id="star35" name="rating3" value="5" /><label for="star35" title="Rocks!">5 stars</label>
+                <input type="radio" id="star34" name="rating3" value="4" /><label for="star34" title="Rocks!">4 stars</label>
+                <input type="radio" id="star33" name="rating3" value="3" /><label for="star33" title="Rocks!">3 stars</label>
+                <input type="radio" id="star32" name="rating3" value="2" /><label for="star32" title="Rocks!">2 stars</label>
+                <input type="radio" id="star31" name="rating3" value="1" /><label for="star31" title="Rocks!">1 stars</label>
+            </span>
+        </div>
+    </div>
+    <div style="margin-top:10%;">
+        <button style="width:33.3%;margin:0 auto;" class="am-btn-danger am-radius am-btn-block">发表评论</button>
+    </div>
+</div>
+    
+<!-- 底部公共代码-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="index.html" class="">
+                <h1><span class="ion-ios-home-outline" ></span></h1>
+            </a>
+        </li>
+        <li>
+            <a href="orderCheck.html" class="">
+                <h1><span class="ion-ios-list-outline"></span></h1>
+            </a>
+        </li>
+        <li >
+            <a href="personalCenter.html" class="">
+                <h1><span class="ion-ios-person-outline"></span></h1>
+            </a>
+        </li>
+        <li data-am-navbar-share>
+            <a href="" class="">
+                <h1><span class="ion-ios-paperplane"></span></h1>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script src="js/amazeui.legacy.min.js"></script>
+<script src="js/amazeui.widgets.helper.min.js"></script>
+
+</body>
+</html>

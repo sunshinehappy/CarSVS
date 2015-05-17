@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>个人中心</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+    <link rel="icon" type="image/png" href="i/favicon.png">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="i/app-icon72x72@2x.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <link rel="apple-touch-icon-precomposed" href="i/app-icon72x72@2x.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+    <meta name="msapplication-TileColor" content="#0e90d2">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+</head>
+
+<body>
+<div class="am-g">
+    <div class="am-u-md-8 am-u-sm-centered">
+        <div data-am-widget="titlebar" class="am-titlebar am-titlebar-default">
+            <h2 class="am-titlebar-title ">
+                <a href="personalInfo.html"><i class="am-icon-user"></i></a>
+                </h2>你好王大锤${customerName}</h2>
+            <nav class="am-titlebar-nav">
+
+            </nav>
+        </div>
+        <div style="margin-top:10%;">
+            <div class="am-u-sm-6">
+                <a href="orderMsg.html"><button class="am-btn am-btn-primary am-btn-block am-btn-xl">
+                    <span class="ion-ios-list-outline"></span><br>
+                    <span style="font-size: 1.6rem;">我的订单</span>
+                </button>
+                </a>
+                <br>
+                <a href="coupon.html">
+                <button class="am-btn am-btn-primary am-btn-block am-btn-xl">
+                    <i class="am-icon-file-text"></i><br>
+                    <span style="font-size: 1.6rem;">我的优惠券</span>
+                </button>
+                </a>
+            </div>
+            <div class="am-u-sm-6">
+                <a href="flow.html">
+                <button class="am-btn am-btn-primary am-btn-block am-btn-xl">
+                    <i class="am-icon-truck"></i><br>
+                    <span style="font-size: 1.6rem;">流程管理</span>
+                </button>
+                </a>
+                <br>
+                <a href="cars.html">
+                <button class="am-btn am-btn-primary am-btn-block am-btn-xl">
+                    <i class="am-icon-pencil"></i><br>
+                    <span style="font-size: 1.6rem;">我的车库</span>
+                </button>
+                </a>
+                <!--<a style="margin-top: 13%;" href="login.html" onclick="javascript:return confirm('确定要退出吗？')" class="am-btn am-btn-block am-radius am-btn-danger am-btn-sm">退出账户</a>-->
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- 底部公共代码-->
+<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default" id="">
+    <ul class="am-navbar-nav am-cf am-avg-sm-4">
+        <li>
+            <a href="index.html" class="">
+                <h1><span  class="ion-ios-home-outline" ></span></h1>
+            </a>
+        </li>
+
+        <li>
+            <a href="orderCheck.html" class="">
+                <h1><span class="ion-ios-list-outline"></span></h1>
+            </a>
+        </li>
+        <li >
+            <a href="personalCenter.html" class="">
+                <h1><span class="ion-ios-person-outline"></span></h1>
+            </a>
+        </li>
+        <li data-am-navbar-share>
+            <a href="" class="">
+                <h1><span class="ion-ios-settings"></span></h1>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/handlebars.min.js"></script>
+<script src="js/amazeui.legacy.min.js"></script>
+<script src="js/amazeui.widgets.helper.min.js"></script>
+
+</body>
+</html>
